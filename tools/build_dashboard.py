@@ -16,6 +16,8 @@ for need in ['transactions', 'status', 'price_changes', 'ai_report', 'market']:
 snapshot = A.snapshot
 password = A.password
 
+# owner-only controls (e.g. the 수정하기 link) never go into the shared website copy
+page = re.sub(r'<(p|div|a)\b[^>]*\bdata-edit-only\b[^>]*>.*?</\1>', '', page, flags=re.S)
 style = re.search(r'<style>(.*?)</style>', page, re.S).group(1)
 body = re.sub(r'<style>.*?</style>', '', page, count=1, flags=re.S)
 # separate markup and scripts
