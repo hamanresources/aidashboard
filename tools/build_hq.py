@@ -2,7 +2,7 @@
 
 사용법:
   python3 build_hq.py --page page.html --d3 d3.min.js --snapshot 2026-10-23 --password '...' --out index.html \
-      --csv inbound=inbound.csv --csv outbound=outbound.csv --json edits=edits.json
+      --csv inbound=inbound.csv --csv outbound=outbound.csv --json edits=edits.json [--json ai_report=ai_report.json]
 
 - page.html: Claude 현황판(Dashboard)의 files/index.html text 그대로
 - 데이터는 gzip으로 압축한 뒤 AES-GCM(PBKDF2-SHA256)으로 암호화해 넣는다. 평문 데이터·비밀번호는 결과물에 남지 않는다.
