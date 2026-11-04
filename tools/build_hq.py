@@ -131,6 +131,7 @@ gate_css = """
 .gate-box button { font: inherit; font-weight: 700; font-size: 16px; padding: 12px; border-radius: 10px; border: 0; background: #111; color: #fff; cursor: pointer; }
 .gate-box button:disabled { opacity: .6; cursor: default; }
 .gate-err { color: var(--color-bad) !important; min-height: 1.4em; }
+.gate-help { font-size: 12.5px !important; text-align: center; }
 """
 
 gate_js = """
@@ -209,10 +210,11 @@ html = f"""<!doctype html>
 <div class="gate" id="gate">
   <div class="gate-box">
     <h1>접근 권한이 있는 임직원만 이용할 수 있습니다.</h1>
-    <p>함안본사+김해공장 임직원 전용 페이지입니다. 비밀번호를 입력해 주세요.</p>
+    <p>함안자원(주) 입출고 현황 페이지입니다.<br>비밀번호를 입력해 주세요.</p>
     <input id="gate-pw" type="password" autocomplete="current-password" aria-label="비밀번호" placeholder="비밀번호">
     <button id="gate-go" type="button">열기</button>
     <p class="gate-err" id="gate-err" aria-live="polite"></p>
+    <p class="gate-help">비밀번호를 모르시면 담당자에게 문의해 주세요.</p>
   </div>
 </div>
 <div id="app" hidden>
