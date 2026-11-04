@@ -199,7 +199,7 @@ html = f"""<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>함안자원 AI 데이터 자동화</title>
+<title>임직원 전용</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600&display=swap">
 <style>{tokens}
@@ -210,7 +210,7 @@ html = f"""<!doctype html>
 <div class="gate" id="gate">
   <div class="gate-box">
     <h1>접근 권한이 있는 임직원만 이용할 수 있습니다.</h1>
-    <p>함안자원(주) 입출고 현황 페이지입니다.<br>비밀번호를 입력해 주세요.</p>
+    <p>비밀번호를 입력해 주세요.</p>
     <input id="gate-pw" type="password" autocomplete="current-password" aria-label="비밀번호" placeholder="비밀번호">
     <button id="gate-go" type="button">열기</button>
     <p class="gate-err" id="gate-err" aria-live="polite"></p>
