@@ -200,6 +200,13 @@ html = f"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <title>임직원 전용</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="theme-color" content="#1e5aa8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="함안자원">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@400;600&display=swap">
 <style>{tokens}
@@ -223,6 +230,7 @@ html = f"""<!doctype html>
 </div>
 <script>{d3}</script>
 <script>{gate_js}</script>
+<script>if('serviceWorker' in navigator){{navigator.serviceWorker.register('sw.js').catch(function(){{}});}}</script>
 </body>
 </html>
 """
